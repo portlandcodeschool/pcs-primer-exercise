@@ -1,6 +1,7 @@
 *Portland Code School*
-### Primer Class
-# Exercises
+### Web Development Primer Class
+# Exercise
+## Update a web site with modern HTML & add pages
 
 In this exercise, you will take a template file and modify it to meet a client's specifications in several iterations.
 
@@ -55,15 +56,15 @@ The contents of the site go in a `<container>` div. The container should float i
 
 **Question for discussion:**
 
-* *Is an HTML5 [`<section>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) element appropriate for this full page container or is the `<div>` element the right choice?* To answer, consider [the specification](http://www.w3.org/TR/html5/sections.html#the-section-element) where it says, "The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the `div` element instead. A general rule is that the section element is appropriate only if the element's contents would be listed explicitly in the document's outline."
+*Is an HTML5 [`<section>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section) element appropriate for this full page container or is the `<div>` element the right choice?* To answer, consider [the specification](http://www.w3.org/TR/html5/sections.html#the-section-element) where it says, "The section element is not a generic container element. When an element is needed only for styling purposes or as a convenience for scripting, authors are encouraged to use the `div` element instead. A general rule is that the section element is appropriate only if the element's contents would be listed explicitly in the document's outline."
 
 The background of the page (everything outside the container div) should be either white, black, or the darkest color of the color palette. 
 
-Notice that there are healthy margins around all of the elements inside the container. This provides "whitespace" among the content that opens up the design, lets it "breathe", and leads to a more engaging customer experience.
+Notice that there are healthy margins around all of the elements inside the container. This provides negative space (or, what print designers used to call "whitespace") among the content that opens up the design, lets it "breathe", and leads to a more engaging customer experience.
 
 ##The Header
 
-The header div now contains the site title in an h1 container, the site tagline in an an h2 container, and the logo. The logo should float to the right. The header should appear on every page. Use an HTML5 [`<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header) element to define this section.
+The header div now contains the site title in an `<h1>` container, the site tagline in an an `<h2>` container, and the logo. The logo should float to the right. The header should appear on every page. Use an HTML5 [`<header>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header) element to define this section.
 
 ##The Navigation Panel
 
@@ -106,16 +107,28 @@ For the logo the photographer is "The Tedster" and the link is:
 
 ##Iteration 1
 
-0. Clone the assignment file repo to a new folder of your choosing on your machine that is not in a repository. We will walk through this in class. 
-0. Copy template.html to your own HTML file for the main page.
-0. Copy template.css to your own CSS file.  (We keep the template files around so that you can refer to them 0f you make changes that don't work and you want to refer to the original.)
-0. Fix the `<link>` tag in the HTML file to point to the renamed CSS file.
+0. Download and unzip the assignment files to a new folder of your choosing on your machine that is not in a repository. We will walk through this in class. 
+0. Make the new folder into a repository using the commands:
+```
+git init
+git add .
+git commit -m"initial commit"
+```
+
+Next, you will make a copy the template files.  (We keep the template files around so that you can refer to them 0f you make changes that don't work and you want to refer to the original.)
+
+0. In the *css* folder, copy template.css to your own CSS file.  
+0. Change the *<link>* tag in the HTML file to point to the renamed CSS file.
+0. Verify that the link works by opening up your index.html file in the Chrome browser.
+
+Next, we start making modifications.
+
 0. Examine the your new CSS file.
 0. Look for CSS rules that control color.
 0. Look for color definitions.
 0. Choose new color definitions from [kuler](https://kuler.adobe.com/create/color-wheel/) and choose a new color palette.
 0. Substitute the new colors into your CSS file.
-0. Check to make sure they look the way they need to look.
+0. Check to make sure they look the way they need to look by opening your *index.html* file in the Chrome browser.
 0. Use `git add .` to stage your changes
 0. Use `git commit -m"Copied template files and modified color palette"` to store your changes in your local repository.
 
@@ -124,7 +137,7 @@ For the logo the photographer is "The Tedster" and the link is:
 
 In this iteration, we add a nav panel and use "floats" to put the nav panel and the content panel side by side, and start playing with the confusing, wonderful world of HTML validation.
 
-Note: After each iteration, stage and commit your changes to your local repository. We won't list the explicit commands to do so any more. Also, you'll note that the overall instructions will become more and more high level. No more "type this" kind of instructions. Towards the end, you'll be told, "Use a media query" as if you know what this means. In order to progress, you will have to become familiar with online documentation and learn how to learn on your own. If you have trouble, please do not hesitate to ask for help from your instructors or classmates.
+Note: After each iteration, stage and commit your changes to your local repository. We won't list the explicit commands to do so any more. Also, you'll note that the overall instructions will become more and more high level. No more "type this" kind of instructions. Towards the end, you'll be told, "Use a media query" as if you know what this means (because you will!). In order to progress, you will have to become familiar with online documentation and learn how to learn on your own. If you have trouble, please do not hesitate to ask for help from your instructors or classmates.
 
 #####HTML Structure
 
@@ -170,8 +183,7 @@ Here we create the header & footer.
 5. Move the contact link to the footer
 6. Change the page title (in the "title" container in the "head" of the page) to match the `<h1>`1 contents.
 7. Make sure `<header>`  behaves well when you squish and stretch your browser. *(What does this mean? We'll discuss.)*
-
-The footer is similar. Make sure it flexes and contains all the information specified above.
+8. The footer is similar. Make sure it flexes and contains all the information specified above.
 
 #####SEO note
 
@@ -185,7 +197,7 @@ Google and other robot spiders expect one -- and *only one* -- h1 on each page t
 
 ##Iteration 4
 
-1. Create the other two pages. (Simple, huh? Copy the page you just made and modify it's contents)  
+1. Create the other two pages. (Simple, huh? Copy the page you just made and modify its contents.)  
 2. Make sure the header and footer are exactly the same on the new pages even if the rest of the content is different.
 2. Modify the nav panel on the main page to include links to the other pages. Use [*relative addressing*](http://www.w3schools.com/tags/att_a_href.asp)
 0. Make sure the nav panel appears in the same position on the othe pages
@@ -202,5 +214,5 @@ Use a [media query](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media
 We will cover responsive design next week, so don't worry too much about this if you don't have time.
 
 <hr />
-Copyright © 2013-2014 Alan Zimmerman & Nìm Wunnan <br />
+Copyright © 2013-2014 Alan Zimmerman <br />
 Used by permission by Portland Code School
