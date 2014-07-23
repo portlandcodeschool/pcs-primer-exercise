@@ -112,10 +112,10 @@ For the logo the photographer is "The Tedster" and the link is:
 ```
 git init
 git add .
-git commit -m"initial commit"
-```
+git commit -m "initial commit"
+``` 
 
-Next, you will make a copy the template files.  (We keep the template files around so that you can refer to them 0f you make changes that don't work and you want to refer to the original.)
+Next, you will make a copy of the template files.  (We keep the template files around so you can refer to them if you make changes that don't work and you want to refer to the original.)
 
 0. In the *css* folder, copy template.css to your own CSS file.  
 0. Change the *<link>* tag in the HTML file to point to the renamed CSS file.
