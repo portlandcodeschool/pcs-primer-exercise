@@ -107,17 +107,19 @@ For the logo the photographer is "The Tedster" and the link is:
 
 ##Iteration 1
 
-0. Download and unzip the assignment files to a new folder of your choosing on your machine that is not in a repository. We will walk through this in class. 
-0. Make the new folder into a repository using the commands:
+0. Clone the repository to the ~/Documents/pcs folder on your machine that is not in a repository. We will walk through this in class. 
+0. Use the commands:
 ```
-git init
-git add .
-git commit -m "initial commit"
+git clone git@github.com:portlandcodeschool/pcs-primer-exercise.git
 ``` 
 
 Next, you will make a copy of the template files.  (We keep the template files around so you can refer to them if you make changes that don't work and you want to refer to the original.)
 
-0. In the *css* folder, copy template.css to your own CSS file.  
+```
+cp -r template site
+```
+
+0. In the *css* folder, copy ```template.css``` to ```main.css``` file.  
 0. Change the *<link>* tag in the HTML file to point to the renamed CSS file.
 0. Verify that the link works by opening up your index.html file in the Chrome browser.
 
