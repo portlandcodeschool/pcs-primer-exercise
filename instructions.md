@@ -105,33 +105,90 @@ For the logo the photographer is "The Tedster" and the link is:
 
 #Detailed instructions
 
+You'll notice that web developers work in three tools at once:
+
+0. The Finder and the command line, to manipulate files and folders
+0. The editor, to change the contents of files
+0. The web browser, to see how the files get displayed on the web.
+
+You will develop skills for keeping all three of these tools in sync and looking at the same files and folders. To do that, pay careful attention as you perform the following steps.
+
 ##Iteration 1
 
-0. Clone the repository to the ~/Documents/pcs folder on your machine that is not in a repository. We will walk through this in class. 
-0. Use the commands:
+Let's practice using the command line as we set up the project repository.
+
+###Set up the files and folders using the command line
+
+Clone the repository to the ~/Documents/pcs folder on your machine that is not in a repository. We will walk through this in class. 
+
+Use the commands:
+
 ```
 git clone git@github.com:portlandcodeschool/pcs-primer-exercise.git
 ``` 
 
 Next, you will make a copy of the template files.  (We keep the template files around so you can refer to them if you make changes that don't work and you want to refer to the original.)
 
+Make a copy of the ```template``` folder and call it ```site``` using the command:
+
 ```
 cp -r template site
 ```
 
-0. In the *css* folder, copy ```template.css``` to ```main.css``` file.  
-0. Change the *<link>* tag in the HTML file to point to the renamed CSS file.
-0. Verify that the link works by opening up your index.html file in the Chrome browser.
+Go down into the site folder:
 
-Next, we start making modifications.
+```
+cd site
+```
 
-0. Examine the your new CSS file.
+Rename the ```template.html``` file to ```index.html``` using the command:
+
+```
+mv template.html index.html
+```
+
+Go down into the ```stylesheets``` folder:
+
+```
+cd stylesheets
+```
+
+You should now be in ```~/Documents/pcs/pcs-primer-exercise/site/stylesheets``` so use the ```pwd``` command to verify that you are in the right place.
+
+In the ``stylesheets`` folder, rename ```template.css``` to ```main.css``` file.  
+
+```
+mv template.css main.css
+```
+
+Now, go back up the ```site``` folder. It's the parent of where you are now so you can use the ".." shortcut
+
+```
+cd ..
+```
+
+Now, edit the ``index.html`` file and find the ```<link>``` tag that used to link to the ```template.css``` file.
+
+Change the ``<link>`` tag in the HTML file to point to the renamed CSS file. Save the file.
+
+Verify that the link works by opening up your index.html file in the Chrome browser. You should see all the same styles.
+
+###Editing CSS
+
+Next, we start making modifications. The instructions become less explicit now.
+
+0. Examine  ```main.css``` -- the new CSS file -- with the editor.
 0. Look for CSS rules that control color.
-0. Look for color definitions.
+0. Look for color definitions. These might be the names of colors or they might be hexidecimal numbers.
 0. Choose new color definitions from [kuler](https://kuler.adobe.com/create/color-wheel/) and choose a new color palette.
-0. Substitute the new colors into your CSS file.
+0. Substitute the new colors into your CSS file. Remember to save the file.
 0. Check to make sure they look the way they need to look by opening your *index.html* file in the Chrome browser.
-0. Use `git add .` to stage your changes
+
+
+### Commit your changes
+
+
+0. Out in the command line, use `git add .` to stage your changes
 0. Use `git commit -m"Copied template files and modified color palette"` to store your changes in your local repository.
 
 
